@@ -17,6 +17,21 @@ class StoriesApi: StoriesApiProtocol {
         apiListener = listener
     }
     
+    func fetchStories(url: String) {
+        if let url = Bundle.main.url(forResource: url, withExtension: "json") {
+            do {
+                let data = try Data(contentsOf: url)
+                let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
+                if let dictionary = object as? [String: AnyObject], let apiModel = ApiModel(JSON: dictionary) {
+                    apiListener?.onDataFetch(api: apiModel)
+                }
+            } catch {
+                print("Error!! Unable to parse  \(url).json")
+            }
+        }
+    }
+    
+// If we were using a API for fetching, we can use DB for fallback in case of API fails
 //    func fetchStories(url: String) {
 //        Alamofire.request(url, method: .get, parameters: [:], encoding: URLEncoding(), headers: nil).responseObject { (response: DataResponse<ApiModel>) in
 //            switch response.result {
@@ -32,18 +47,5 @@ class StoriesApi: StoriesApiProtocol {
 //            }
 //        }
 //    }
-    
-    func fetchStories(url: String) {
-        if let url = Bundle.main.url(forResource: url, withExtension: "json") {
-            do {
-                let data = try Data(contentsOf: url)
-                let object = try JSONSerialization.jsonObject(with: data, options: .allowFragments)
-                if let dictionary = object as? [String: AnyObject], let apiModel = ApiModel(JSON: dictionary) {
-                    apiListener?.onDataFetch(api: apiModel)
-                }
-            } catch {
-                print("Error!! Unable to parse  \(url).json")
-            }
-        }
-    }
+
 }
