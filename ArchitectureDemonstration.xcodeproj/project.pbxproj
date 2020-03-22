@@ -156,7 +156,6 @@
 			children = (
 				715FF04D2428048B00131101 /* MockApi.swift */,
 				715FF0132427F8DC00131101 /* ArchitectureDemonstrationTests.swift */,
-				715FF04F2428049700131101 /* local.json */,
 				715FF0152427F8DC00131101 /* Info.plist */,
 			);
 			path = ArchitectureDemonstrationTests;
@@ -168,6 +167,7 @@
 				715FF01F2427FAC900131101 /* StoriesApiProtocol.swift */,
 				715FF0202427FAC900131101 /* LocalDatabaseController.swift */,
 				715FF0212427FAC900131101 /* StoriesApi.swift */,
+				715FF04F2428049700131101 /* local.json */,
 			);
 			path = API;
 			sourceTree = "<group>";
