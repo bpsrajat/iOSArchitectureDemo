@@ -1,0 +1,6 @@
+module Pods_ArchitectureDemonstration {
+  umbrella header "Pods-ArchitectureDemonstration-umbrella.h"
+
+  export *
+  module * { export * }
+}
