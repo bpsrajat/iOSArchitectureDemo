@@ -9,7 +9,7 @@ The purpose of this demonstration is to show a protocol-oriented Hybrid Architec
 2. Supports multiple sources of data( i.e multiple DBs, APIs etc)
 3. Each Layer is responsible for different challenges.
 
-Currently, this demo app has active pagination from a local json due to which it supports infinite scrolling as well.
+Currently, this demo app has active pagination from a local json due to which it supports infinite scrolling as well, Further, this architecture pattern also supports dependency Injection and, also have some test cases using a mock API class.
 
 There are mainly 4 Layers in this Hybrid Architecture:
 1. API Layer
