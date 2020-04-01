@@ -18,6 +18,7 @@ There are mainly 4 Layers in this Hybrid Architecture:
 4. VIEW Layer
 
 Following is how the XCode directory looks like:
+
 ![](Images/Xcode-Directory.png)
 
 Responsibilities:
